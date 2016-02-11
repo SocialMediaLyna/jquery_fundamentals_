@@ -98,14 +98,14 @@ $( "#step-8" ).css()
 
 
 
+
+
 // STEP 9: Empty Elements
 
 // Remove all children and text of "#step-9"
 // Hint: you can use .empty
 
-
-
-
+$( "#step-9").empty();
 
 
 
@@ -115,9 +115,10 @@ $( "#step-8" ).css()
 // Show Alert with 1 second delay (Use "setTimeout")
 // Hint: you can use setTimeout and alert (these aren't jQuery functions!)
 
-
-
-
+function explode(){
+  alert("This is a one second delay!");
+}
+setTimeout(explode, 1000);
 
 
 
@@ -134,10 +135,12 @@ $( "#step-8" ).css()
 
 
 
+
 // STEP 12: Animate
 
 // Make "#step-12" double size with animation
 // Hint: you can use .animate, .width, and .height
+
 
 
 
