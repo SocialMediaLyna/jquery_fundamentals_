@@ -10,6 +10,11 @@
 // Find the Google search button and store it in a variable.
 // Modify the text of the button so that it says "Yahooo!" instead.
 
+var logo = document.getElementById("hplogo");
+logo.style.background = "url('http://assets.fontsinuse.com/static/use-media-items/15/14245/full-2048x768/567028ce/Yahoo_Logo_Purple.png?resolution=0')";
+
+var searchButton = document.querySelector(".jsb center input");
+searchButton.value = "test";
 
 
 
