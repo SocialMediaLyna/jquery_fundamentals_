@@ -95,7 +95,7 @@ $("#step-7a div").appendTo($("#step-7b"));
 $( "#step-8" ).css()
 
 
-
+// $("#step-8").css({"width": $("#step-8").width() * 2})
 
 
 
@@ -128,9 +128,7 @@ setTimeout(explode, 1000);
 // Show the number of children in an alert
 // Hint: you can use .children, .length and alert or you could use .find, .size and alert. the alert should show 5
 
-
-
-
+alert($("#step-12").children("div").length );
 
 
 
@@ -141,10 +139,10 @@ setTimeout(explode, 1000);
 // Make "#step-12" double size with animation
 // Hint: you can use .animate, .width, and .height
 
-
-
-
-
+$( "#step-12" ).animate( {
+    width: $("step-12").height() * 2
+  }, 3000, function() {
+});
 
 
 
@@ -157,7 +155,7 @@ setTimeout(explode, 1000);
 
 
 
-
+// $("#step-13").children().not("h4").remove()
 
 
 
@@ -166,3 +164,7 @@ setTimeout(explode, 1000);
 
 // Remove all 'div's from "#step-14" which have no child elements.
 // Hint: you can use .not and .remove. Look closely at what options you can pass .not
+
+
+
+// $("#step-14").children(":empty").remove()
