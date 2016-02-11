@@ -152,10 +152,8 @@ $( "#step-12" ).animate( {
 // Remove all children of "#step-13" other than any h4 tags
 // Hint: you can use .children, .not and .remove
 
+$("#step-13").children().not("h4").remove();
 
-
-
-// $("#step-13").children().not("h4").remove()
 
 
 
@@ -165,6 +163,4 @@ $( "#step-12" ).animate( {
 // Remove all 'div's from "#step-14" which have no child elements.
 // Hint: you can use .not and .remove. Look closely at what options you can pass .not
 
-
-
-// $("#step-14").children(":empty").remove()
+$("#step-14").remove();
