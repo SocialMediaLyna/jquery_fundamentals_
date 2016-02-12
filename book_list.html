@@ -1,0 +1,68 @@
+<!-- // Keep track of which books you read and which books you want to read!
+
+// Create a webpage with an h1 of "My Book List".
+// Add a script tag to the bottom of the page, where all your JS will go.
+// Copy the array of books from the previous exercise.
+// Iterate through the array of books. For each book, create a p element with the book title and author and append it to the page.
+// Bonus: Use a ul and li to display the books.
+// Bonus: add a property to each book with the URL of the book cover, and add an img element for each book on the page.
+// Bonus: Change the style of the book depending on whether you have read it or not. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Book List</title>
+</head>
+<body>
+  <h1>My Book List</h1>
+
+  <script>
+    var books = [
+      {title: "Jane Eyre",
+      author: "Charlotte Bronte",
+      alreadyRead: true
+    },
+      {title: "P.S. I Love You",
+      author: "Petra Nemcova",
+      alreadyRead: true
+    },
+      {title: "Steve Jobs",
+      author: "Walter Isaacson",
+      alreadyRead: false
+    },
+  ];
+
+  books[0]["cover"] = "http://static.tvtropes.org/pmwiki/pub/images/Jane_Eyre.jpg";
+  books[1]["cover"] = "http://ecx.images-amazon.com/images/I/51UiaP7rGAL._SX335_BO1,204,203,200_.jpg";
+  books[2]["cover"] = "https://upload.wikimedia.org/wikipedia/en/e/e4/Steve_Jobs_by_Walter_Isaacson.jpg";
+
+  var pageNode = document.getElementsByTagName('body')[0];
+  var ul = document.createElement('ul');
+  for (var i=0; i<books.length; i++) {
+    var li = document.createElement('li');
+    var paragraphText = document.createTextNode('Title: ' + books[i].title + ", Author: " + books[i].author);
+    li.appendChild(paragraphText);
+    var newImg = document.createElement("img");
+    newImg.src = books[i].cover;
+    li.appendChild(newImg);
+    if (books[i].alreadyRead) {
+      li.setAttribute("class", "read");
+    }
+    else {
+      li.setAttribute("class", "unread");
+    }
+    ul.appendChild(li);
+    }
+    pageNode.appendChild(ul);
+    var readBooks = document.getElementsByClassName('read');
+    for (var i=0; i<readBooks.length; i++) {
+      readBooks[i].style.color="green";
+    }
+    var unreadBooks = document.getElementsByClassName('unread');
+    for (var i=0; i<readBooks.length; i++) {
+      unreadBooks[i].style.color="grey";
+    }
+  </script>
+
+</body>
+</html>
