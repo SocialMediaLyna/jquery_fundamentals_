@@ -11,12 +11,10 @@
 // Modify the text of the button so that it says "Yahooo!" instead.
 
 var logo = document.getElementById("hplogo");
-logo.style.background = "url('http://assets.fontsinuse.com/static/use-media-items/15/14245/full-2048x768/567028ce/Yahoo_Logo_Purple.png?resolution=0')";
+logo.style.background = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yahoo_Logo.svg/2000px-Yahoo_Logo.svg.png')";
 
-var searchButton = document.querySelector(".jsb center input");
-searchButton.value = "test";
-
-
+var googleSearch = document.querySelector(".jsb center input");
+googleSearch.value = "Yahoo!";
 
 
 
@@ -50,9 +48,7 @@ searchButton.value = "test";
 // Iterate through each li and change the class to "listitem". Add a style tag that sets a rule for "listitem" to make the color red.
 // Create a new img element and set its src attribute to a picture of you. Append that element to the page.
 
-
-
-
+  //// My answer is in the 'aboutme.html'
 
 
 
