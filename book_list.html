@@ -32,9 +32,11 @@
     },
   ];
 
+// Number within array is taking from the books array defined above
   books[0]["cover"] = "http://static.tvtropes.org/pmwiki/pub/images/Jane_Eyre.jpg";
   books[1]["cover"] = "http://ecx.images-amazon.com/images/I/51UiaP7rGAL._SX335_BO1,204,203,200_.jpg";
   books[2]["cover"] = "https://upload.wikimedia.org/wikipedia/en/e/e4/Steve_Jobs_by_Walter_Isaacson.jpg";
+
 
   var pageNode = document.getElementsByTagName('body')[0];
   var ul = document.createElement('ul');
@@ -49,7 +51,7 @@
       li.setAttribute("class", "read");
     }
     else {
-      li.setAttribute("class", "unread");
+    li.setAttribute("class", "unread");
     }
     ul.appendChild(li);
     }
